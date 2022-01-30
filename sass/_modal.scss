@@ -1,0 +1,160 @@
+// madal_map
+
+
+
+  
+  .modal_map {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.884);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+
+    .map_online {
+      position: relative;
+      top: 7%;
+      left: 3%;
+      width: 90%;
+      height: 90%;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        width: 40%;
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+      }
+    }
+  
+    &__close {
+      position: absolute;
+      top: 5%;
+      right: 3%;
+      &:hover {
+        cursor: pointer;
+        i {
+          color: rgba(255, 255, 255, 0.466);
+        }
+      }
+      i {
+        color: #fff;
+        font-size: 40px;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .modal_map_db {
+    display: block;
+  }
+
+
+
+// modal burger
+
+.modal {
+  padding-top: 30px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  bottom: 0;
+
+
+  display: none;
+  transform: translateX(-1000px);
+  transition: 800ms;
+  z-index: 30;
+  width: 80vw;
+  // height: 100vw;
+  background-color: #fff;
+  &.active {
+    transform: translateX(0px);
+  }
+
+  &__list {
+    width: 40%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .close_btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    border: none;
+    padding: 5px;
+    background-color: rgba(24, 26, 26, 0.856);
+    color: white;
+    font-size: 30px;
+  }
+
+  &__link {
+    margin-bottom: 14px;
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    &:hover {
+      color: rgba(3, 53, 28, 0.404);
+    }
+  }
+}
+
+.burger {
+  display: none;
+  // display: inline-block;
+  position: fixed;
+  right: 25px;
+  top: 15px;
+  z-index: 35;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+@media(max-width: 600px) {
+  
+  .burger {
+    display: inline-block;
+  }
+
+  .modal {
+    display: block;
+  }
+}

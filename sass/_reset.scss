@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "UniNeue";
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 1270px;
+  max-width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+body {
+  overflow-x: hidden;
+}

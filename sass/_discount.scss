@@ -1,0 +1,191 @@
+.discount {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 50% 42%;
+  column-gap: 8%;
+  margin-bottom: 50px;
+  align-items: flex-end;
+
+  &__left {
+    p {
+      width: 100%;
+      font-size: 17px;
+      margin-bottom: 30px;
+      line-height: 27px;
+
+      span {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: 700;
+      }
+    }
+
+    .calc {
+      width: 100%;
+      height: 90px;
+      background-color: #fe7452;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      box-shadow: inset 0px -4px 10px #e83e3e;
+      padding: 10px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: inset 0px 4px 10px #912727;
+      }
+
+      span {
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: left;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__right {
+    h4 {
+      color: #282728;
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+  }
+
+  // corousel
+
+  .carousel {
+    // width: 325px;
+    width: 100%;
+    height: 110px;
+    // border: 1px solid black;
+
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel .carousel-items {
+    overflow: hidden;
+    // border: 1px solid black;
+    position: relative;
+    width: 100%;
+    height: 110px;
+  }
+  .carousel .carousel-items .carousel-item {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    transition: 200ms;
+    width: 85px;
+    height: 110px;
+    // background-color: sandybrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      pointer-events: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.418);
+    }
+  }
+  .carousel .carousel-items-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    // background-color: chartreuse;
+    cursor: pointer;
+    img {
+      pointer-events: none;
+    }
+  }
+  .carousel .carousel-items-arrow.arrow-prev {
+    left: -15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel .carousel-items-arrow.arrow-next {
+    right: -14%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// media
+@media (max-width: 900px) {
+  .discount__left .calc span {
+    font-size: 11px;
+  }
+  .discount__left p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .discount__right h4 {
+    text-align: center;
+  }
+
+  .discount__left .calc {
+    width: 90%;
+    height: 66px;
+    padding: 0;
+  }
+}
+@media (max-width: 800px) {
+  .discount {
+    width: 80%;
+    grid-template-columns: 46%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .discount__left p {
+    font-size: 17px;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 260px;
+}
+.discount__right h4 {
+  margin-top: 10px;
+}
+
+}
+@media (max-width: 500px) {
+  .discount {
+    grid-template-columns: 52%;
+    
+  }
+
+  
+
+}
+@media (max-width: 450px) {
+  .discount {
+    grid-template-columns: 60%;
+    
+  }
+
+  
+
+}
+@media (max-width: 380px) {
+  .discount {
+    grid-template-columns: 71%;
+  }
+
+  }

@@ -1,0 +1,46 @@
+.nav {
+  margin-top: 50px;
+  @include df_aic_jcsb;
+
+  &__link {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    &:hover {
+      transition: 300ms;
+      color: blue;
+    }
+  }
+}
+
+// media
+@media (max-width: 1000px) {
+  .nav__link {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 880px) {
+  .nav__link {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 750px) {
+  .nav__link {
+    font-size: 10px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 660px) {
+  .nav__link {
+    font-size: 8px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 600px) {
+  .nav__link {
+    display: none;
+  }
+}
